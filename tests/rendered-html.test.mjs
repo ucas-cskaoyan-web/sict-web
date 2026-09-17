@@ -173,14 +173,15 @@ test("server-renders the real score registration entry", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /2027.*考研登分/s);
-  assert.match(html, /2027 登分开放/);
+  assert.match(html, /2027 登分测试中/);
   assert.match(html, /考生信息/);
   assert.match(html, /成绩证明/);
   assert.match(html, /身份不公开/);
   assert.match(html, /以明文保存/);
   assert.match(html, /提交你的 2027 初试成绩/);
-  assert.match(html, /2027 已核验成绩榜/);
-  assert.match(html, /学硕与专硕分别排名/);
+  assert.match(html, /测试数据/);
+  assert.match(html, /2027 测试成绩样例榜/);
+  assert.match(html, /学硕、专硕分别排名/);
   assert.match(html, /学术型硕士榜/);
   assert.match(html, /专业型硕士榜/);
   assert.match(html, /政治.*英语.*数学.*408.*总分/s);

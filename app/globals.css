@@ -789,6 +789,11 @@ footer { display: grid; min-height: 190px; padding: 50px max(32px, calc((100vw -
 .score-notice p { margin: 0; font-size: 13px; line-height: 1.65; }
 .score-notice p strong { margin-right: 17px; letter-spacing: .08em; }
 .score-notice a { flex: none; border-bottom: 1px solid rgba(255,255,255,.75); font-size: 11px; font-weight: 850; }
+.score-hero-badges span.is-test { border-color: rgba(255,190,118,.85); background: rgba(221,95,27,.22); color: #ffd2a2; }
+.score-test-data-notice { display: grid; min-height: 94px; padding: 20px max(32px, calc((100vw - 1180px) / 2)); grid-template-columns: auto minmax(0, 1fr); align-items: center; border-bottom: 1px solid #e3b06b; background: #fff4df; color: #543216; gap: 18px; }
+.score-test-data-mark { display: inline-grid; min-height: 42px; padding: 0 14px; place-items: center; border: 1px solid #bc661f; background: #d9691d; color: white; font-size: 12px; font-weight: 900; letter-spacing: .12em; white-space: nowrap; }
+.score-test-data-notice strong { display: block; color: #7b3c0b; font-size: 15px; font-weight: 900; letter-spacing: .04em; }
+.score-test-data-notice p { max-width: 1030px; margin: 5px 0 0; color: #704a27; font-size: 13px; line-height: 1.8; }
 
 .score-principles { display: grid; border-bottom: 1px solid var(--line); grid-template-columns: repeat(3, 1fr); background: var(--paper-deep); }
 .score-principles article { display: grid; min-height: 182px; padding: 35px clamp(24px, 3.5vw, 55px); grid-template-columns: 34px 1fr; border-right: 1px solid var(--line); gap: 16px; }
@@ -1204,6 +1209,8 @@ footer { display: grid; min-height: 190px; padding: 50px max(32px, calc((100vw -
   .score-launch-state { padding: 22px; }
   .score-notice { padding: 15px 18px; align-items: flex-start; flex-direction: column; gap: 8px; }
   .score-notice p strong { display: block; margin: 0 0 5px; }
+  .score-test-data-notice { min-height: 0; padding: 16px 18px; align-items: start; gap: 11px; }
+  .score-test-data-mark { min-height: 32px; padding: 0 10px; font-size: 10px; }
   .score-principles { grid-template-columns: 1fr; }
   .score-principles article { min-height: 0; padding: 25px 18px; border-right: 0; border-bottom: 1px solid var(--line); }
   .score-workspace-section { width: calc(100% - 36px); padding: 76px 0 85px; }

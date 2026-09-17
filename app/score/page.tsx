@@ -61,6 +61,7 @@ export default function ScorePage() {
             <strong>核验后只公开各科分数、总分与排名</strong>。
           </p>
           <div className="score-hero-badges" aria-label="登分系统特点">
+            <span className="is-test">测试阶段</span>
             <span>QQ 身份</span>
             <span>成绩证明</span>
             <span>仅后台可见</span>
@@ -69,8 +70,8 @@ export default function ScorePage() {
 
         <aside className="score-launch-state" aria-label="登分开放状态">
           <span className="score-state-label">当前状态</span>
-          <strong>2027 登分开放</strong>
-          <p>初试成绩可以提交和更新；每个 QQ 身份同一年只保留一条记录。</p>
+          <strong>2027 登分测试中</strong>
+          <p>目前处于联调阶段；公开统计与榜单均使用测试样例。</p>
           <dl>
             <div><dt>身份登录</dt><dd>QQ 登录</dd></div>
             <div><dt>提交状态</dt><dd>等待核验</dd></div>
@@ -81,6 +82,14 @@ export default function ScorePage() {
       <div className="score-notice">
         <p><strong>非官方说明</strong> 本系统由学生维护，样本数据不代表研究所官方排名、复试线或录取结果。</p>
         <a href="#score-rules">查看登分规则 ↓</a>
+      </div>
+
+      <div className="score-test-data-notice" role="note" aria-label="测试样例数据说明">
+        <span className="score-test-data-mark">测试数据</span>
+        <div>
+          <strong>2027 登分系统正在测试</strong>
+          <p>当前展示的成绩、排名、统计和公开榜单均为虚构测试样例，仅用于演示登记、核验与学硕/专硕分榜效果。测试期间请勿提交真实姓名、准考证号或成绩证明；页面内容不代表真实考生、正式排名或任何招生结论。</p>
+        </div>
       </div>
 
       <section className="score-principles" aria-label="登分系统原则">

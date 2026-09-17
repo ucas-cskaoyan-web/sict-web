@@ -682,25 +682,25 @@ export function ScoreWorkspace({
         </div>
       </section>
 
-      <aside className="score-stat-card" aria-label="2027 民间登分统计">
+      <aside className="score-stat-card" aria-label="2027 测试样例统计">
         <header>
-          <div><span>2027 民间样本</span><strong>匿名统计</strong></div>
-          <b>开放中</b>
+          <div><span>2027 测试样例</span><strong>演示统计</strong></div>
+          <b>测试中</b>
         </header>
         <div className="score-stat-primary">
-          <span>已提交样本</span>
+          <span>测试样例</span>
           <strong>{stats?.submittedCount ?? "—"}</strong>
-          <small>含等待核验记录</small>
+          <small>仅用于页面演示</small>
         </div>
         <div className="score-stat-grid">
-          <div><span>核验通过</span><strong>{stats?.approvedCount ?? "—"}</strong></div>
-          <div><span>平均分</span><strong>{stats?.statsReady ? stats.average : "—"}</strong></div>
-          <div><span>中位数</span><strong>{stats?.statsReady ? stats.median : "—"}</strong></div>
-          <div><span>最高分</span><strong>{stats?.statsReady ? stats.highest : "—"}</strong></div>
+          <div><span>模拟核验</span><strong>{stats?.approvedCount ?? "—"}</strong></div>
+          <div><span>样例均分</span><strong>{stats?.statsReady ? stats.average : "—"}</strong></div>
+          <div><span>样例中位</span><strong>{stats?.statsReady ? stats.median : "—"}</strong></div>
+          <div><span>样例最高</span><strong>{stats?.statsReady ? stats.highest : "—"}</strong></div>
         </div>
         <div className="score-stat-boundary">
-          <strong>统计边界</strong>
-          <p>核验通过不足 {stats?.minimumSample ?? 5} 份时不展示成绩分布；所有数字都只是本站自愿样本。</p>
+          <strong>测试说明</strong>
+          <p>当前所有数字均为虚构测试样例，不构成真实考生统计、复试排名或招生依据。</p>
         </div>
         <ol className="score-stat-process">
           <li><span>01</span><p><strong>实名登记</strong><small>明文，仅后台可见</small></p></li>
@@ -730,11 +730,11 @@ function PublicLeaderboardTable({ leaderboard }: { leaderboard: PublicLeaderboar
     <section className="score-public-leaderboard" aria-labelledby="public-leaderboard-title">
       <header>
         <div>
-          <p className="score-panel-kicker">PUBLIC · VERIFIED SCORES</p>
-          <h3 id="public-leaderboard-title">2027 已核验成绩榜</h3>
-          <p>学硕与专硕分别排名，仅展示各科分数、总分和当前名次，不公开任何身份信息。</p>
+          <p className="score-panel-kicker">DEMO · TEST DATA</p>
+          <h3 id="public-leaderboard-title">2027 测试成绩样例榜</h3>
+          <p>全部为虚构测试样例，用于演示学硕、专硕分别排名的效果；仅展示各科分数、总分和当前名次，不公开任何身份信息。</p>
         </div>
-        <b>{leaderboard?.approvedCount ?? 0} 份已核验样本</b>
+        <b>{leaderboard?.approvedCount ?? 0} 条测试样例</b>
       </header>
 
       <div className="score-leaderboard-tabs" role="tablist" aria-label="选择报考类型榜单">
@@ -775,13 +775,13 @@ function PublicLeaderboardTable({ leaderboard }: { leaderboard: PublicLeaderboar
                 </tr>
               ))
             ) : (
-              <tr className="score-leaderboard-empty"><td colSpan={6}><strong>{activeGroup.label}暂无已核验成绩</strong><p>管理员核验通过后，成绩会自动进入这里。</p></td></tr>
+              <tr className="score-leaderboard-empty"><td colSpan={6}><strong>{activeGroup.label}暂无测试样例</strong><p>测试样例载入后会展示在这里。</p></td></tr>
             )}
           </tbody>
         </table>
       </div>
 
-      <footer>学硕、专硕独立排名，均按总分从高到低计算，同分并列；榜单仅代表本站当前自愿提交并已核验的样本。</footer>
+      <footer>学硕、专硕独立排名，均按总分从高到低计算，同分并列；当前榜单全部为虚构测试样例，不代表真实报考数据。</footer>
     </section>
   );
 }
